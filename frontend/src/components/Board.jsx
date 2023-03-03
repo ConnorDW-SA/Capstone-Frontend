@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
-// make 6 square board with h1 titled pawn that can be dragged and dropped to other squares
-
+import { ReactComponent as King } from "../assets/pieces/King.svg";
 const isEven = (i, j) => (i + j) % 2 === 0;
 
 const Board = () => {
@@ -51,14 +49,14 @@ const Board = () => {
                 style={{ width: 50, height: 50, backgroundColor }}
               >
                 {i === pawn.x && j === pawn.y && (
-                  <h5
-                    className="pawn"
+                  <div
+                    className="pawn-pic d-flex justify-content-center align-items-center"
                     id={`${i}-${j}`}
                     draggable
                     onDragStart={handleDragStart}
                   >
-                    pawn
-                  </h5>
+                    <King />
+                  </div>
                 )}
               </div>
             );
