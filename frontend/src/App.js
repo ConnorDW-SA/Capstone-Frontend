@@ -1,11 +1,11 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Board from "./components/Board";
+import ChessBoard from "./components/main/Board";
+
 function App() {
   return (
     <div className="App">
-      <h1>Chess</h1>
-      <Board />
+      <ChessBoard />
     </div>
   );
 }
